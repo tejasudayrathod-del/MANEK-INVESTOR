@@ -1,0 +1,27 @@
+name: Policy Renewal Alert
+
+on:
+  schedule:
+    # Runs every day at 08:00 AM UTC
+    - cron: '0 8 * * *'
+  workflow_dispatch: # Allows manual triggering for testing
+
+jobs:
+  check-renewals:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Send Daily Renewal Summary
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          secure: true
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_PASSWORD }}
+          subject: "GitHub Policy Renewal Check"
+          to: ${{ secrets.MY_EMAIL }}
+          from: "GitHub Renewal Bot"
+          body: "Check your open policy issues on GitHub: https://github.com/${{ github.repository }}/issues"
