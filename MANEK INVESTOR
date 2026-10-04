@@ -1,0 +1,26 @@
+---
+name: Policy Record
+about: Create a new policy tracking entry
+title: '[POLICY] '
+labels: 'Insurance'
+assignees: ''
+---
+
+### 📋 Policy Summary
+- **Policy Name:** 
+- **Insurance / Service Provider:** 
+- **Policy Number:** 
+- **Premium Amount ($):** 
+
+### 📅 Critical Dates
+- **Start Date:** YYYY-MM-DD
+- **Expiration / Renewal Date:** YYYY-MM-DD
+- **Reminder Threshold:** 30 days prior
+
+### 📄 Documents & Access
+- **Portal Login URL:** 
+- **Agent Contact Info:** 
+- **Attached Documents / Receipts:** *(Drag and drop policy PDFs here)*
+
+### 📝 Additional Notes
+-
